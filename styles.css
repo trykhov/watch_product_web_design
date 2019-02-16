@@ -1,0 +1,112 @@
+body {
+  background-color: #d9d9d9;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  display: table;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+ /***************************** First Column **********************************/
+.first_col {
+  background: #fff;
+  /* margin: auto 50px; */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 20% auto 10%;
+  grid-template-areas:
+    "back back ikon"
+    "name name ."
+    "details display ex";
+  grid-row-gap: 2em;
+}
+
+.back_arrow {
+  grid-area: back;
+  display: flex;
+  align-items: center; /* vertical center */
+}
+
+/* icon is apparently a key word */
+.grid_icon_container {
+  grid-area: ikon;
+}
+
+.product_info {
+  width: 300px;
+  grid-area: name;
+}
+
+.product_details {
+  grid-area: details;
+}
+
+.product_display {
+  width: auto;
+  grid-area: display;
+}
+
+.watch_main {
+  width: 250px;
+  height: 300px;
+}
+
+.example {
+  grid-area: ex;
+  display: flex;
+  align-items: center;
+}
+
+.example_desc {
+  white-space: nowrap; /* this allows the text to extend */
+  /* display: inline-block;
+  transform: rotate(-90deg); */
+  writing-mode: vertical-lr;
+}
+/***************************** Second Column **********************************/
+
+.image_col2 {
+  height: 100%;
+  width: 100%;
+}
+
+/***************************** Third Column ***********************************/
+
+.third_col {
+  background: #fff;
+  display: grid;
+  grid-template-areas:
+    "image"
+    "suggestion";
+  width: 300px;
+}
+
+.product_demo {
+  grid-area: image;
+}
+
+.image_col3 {
+  width: 100%;
+}
+
+.next_suggestion {
+  grid-area: suggestion;
+  text-align: center;
+  height: 50%;
+}
+
+@media (max-width: 500px) {
+  .third_col {
+    width: 400px;
+  }
+}
+
+/***************************** Third Column ***********************************/
