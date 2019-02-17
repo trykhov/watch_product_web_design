@@ -9,21 +9,19 @@ h3 {
   display: table;
 }
 
-
  /***************************** First Column **********************************/
 .first_col {
   background: #fff;
   /* margin: auto 50px; */
-  padding: 20px;
+  padding: 60px;
   display: grid;
-  grid-template-columns: 60px 250px 20px;
-  /* grid-template-columns: 20% auto 20%; */
   grid-template-areas:
     "back back ikon"
     "name name ."
     "details display ex";
   grid-row-gap: 2em;
   justify-content: center;
+  font-size: 40px;
 }
 
 .back_arrow {
@@ -38,7 +36,7 @@ h3 {
 }
 
 .product_info {
-  width: 300px;
+  /* width: 300px; */
   grid-area: name;
 }
 
@@ -52,8 +50,8 @@ h3 {
 }
 
 .watch_main {
-  width: 250px;
-  height: 300px;
+  width: 500px;
+  height: 600px;
 }
 
 .example {
@@ -70,6 +68,7 @@ h3 {
 }
 
 /***************************** Second Column **********************************/
+
 
 .image_col2 {
   height: 100%;
@@ -101,6 +100,8 @@ h3 {
   height: 50%;
 }
 
+/***************************** Responsiveness ***********************************/
+
 @media only screen and (min-width: 1000px) {
   .container {
     display: flex;
@@ -111,12 +112,21 @@ h3 {
   }
 
   .first_col {
-    grid-template-columns: 20% auto 10%;
+    grid-template-columns: 60px 250px 20px;
+    font-size: 16px;
+  }
+
+  .watch_main {
+    width: 250px;
+    height: 300px;
   }
 
   .third_col {
     width: 300px;
   }
-
 }
+
+
+
+
 /***************************** Third Column ***********************************/
